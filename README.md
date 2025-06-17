@@ -1,5 +1,3 @@
-### **README.md**
-
 ````markdown
 # Snake Game with Hand Detection
 
@@ -116,3 +114,4 @@ Jika Anda ingin berkontribusi pada proyek ini, silakan lakukan **fork** reposito
 ## Lisensi
 
 Proyek ini dilisensikan di bawah **MIT License** - lihat file [LICENSE](LICENSE) untuk detail lebih lanjut.
+
