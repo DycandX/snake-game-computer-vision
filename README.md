@@ -1,5 +1,3 @@
-Tentu! Berikut adalah file **`README.md`** yang bisa Anda salin dan tempel ke dalam proyek Anda.
-
 ### **README.md**
 
 ````markdown
