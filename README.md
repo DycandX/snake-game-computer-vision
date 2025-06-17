@@ -68,7 +68,4 @@ Proyek ini adalah **Snake Game** di mana pergerakan ular dikendalikan dengan ger
 * **Mata Kuliah**: Pengolahan Citra
 * **Dosen Pengampu**: Ir. Prayitno, S.ST., M.T., Ph.D
 
-## Lisensi
-
-Proyek ini dilisensikan di bawah Lisensi MIT - lihat file [LICENSE](LICENSE) untuk detail lebih lanjut.
 
