@@ -1,124 +1,74 @@
----
 
-# Snake Game with Hand Detection
+# Snake Game dengan Computer Vision
 
-## Deskripsi
-
-Snake Game dengan **deteksi tangan** menggunakan **OpenCV** dan **pygame**. Dalam game ini, pemain mengontrol ular dengan gerakan tangan (menggunakan deteksi jari telunjuk) dan bertujuan untuk makan makanan yang muncul di layar, meningkatkan skor. Game akan berakhir ketika kepala ular bertabrakan dengan tubuhnya.
+Proyek ini adalah **Snake Game** di mana pergerakan ular dikendalikan dengan gerakan tangan menggunakan kamera, dengan memanfaatkan teknik **Computer Vision**. Permainan ini diimplementasikan menggunakan **OpenCV** untuk pengolahan citra, **Pygame** untuk efek suara, dan **cvzone** untuk pelacakan tangan.
 
 ## Fitur
 
-* Deteksi gerakan tangan menggunakan **OpenCV** dan **cvzone**.
-* Pemain menggerakkan ular menggunakan jari telunjuk yang terdeteksi oleh kamera.
-* Suara latar belakang (BGM), efek suara makan makanan, dan suara **game over**.
-* Tampilan menu utama dengan tombol **Start** dan **Exit**.
-* Fitur game over dan restart permainan.
-* Tampilan skor yang selalu terlihat selama permainan.
-
-## Teknologi yang Digunakan
-
-* **Python 3.x**
-* **pygame**: Untuk pemutaran audio dan pengaturan game.
-* **OpenCV**: Untuk pemrosesan citra dan deteksi tangan.
-* **cvzone**: Untuk menambahkan teks dan overlay pada gambar.
-* **NumPy**: Untuk pengolahan array dan deteksi tabrakan.
+- **Pelacakan Tangan**: Pergerakan ular dikendalikan dengan mendeteksi tangan pengguna menggunakan kamera. Permainan ini menggunakan **HandTrackingModule** dari **cvzone** untuk mendeteksi dan melacak posisi jari telunjuk.
+- **Suara Permainan**: Permainan ini memiliki musik latar belakang (**BGM**) dan efek suara untuk makan makanan dan peristiwa game over.
+- **Deteksi Tabrakan**: Permainan ini menerapkan sistem deteksi tabrakan di mana permainan berakhir jika kepala ular bertabrakan dengan tubuhnya.
+- **Interaksi Makanan**: Ular memakan makanan yang muncul secara acak di layar. Setiap kali ular memakan makanan, panjang ular bertambah dan skor diperbarui.
 
 ## Persyaratan
 
-Pastikan Anda telah menginstal semua dependensi berikut:
-
-```bash
-pip install pygame opencv-python cvzone numpy
-```
+- Python 3.x
+- Pygame
+- OpenCV
+- cvzone
 
 ## Instalasi
 
-1. **Clone repositori ini**:
+1. Clone repositori ini:
+   ```bash
+   https://github.com/DycandX/snake-game-computer-vision.git
+
+
+2. Instal dependensi yang diperlukan:
 
    ```bash
-   git clone https://github.com/username/SnakeGameCamera.git
+   pip install -r requirements.txt
    ```
 
-2. **Masuk ke direktori proyek**:
+3. Pastikan Anda memiliki file-file berikut di folder **`/assets`**:
 
-   ```bash
-   cd SnakeGameCamera
-   ```
+   * **`/assets/sounds/BGM.wav`** (Musik latar belakang)
+   * **`/assets/sounds/eat.wav`** (Efek suara untuk makan makanan)
+   * **`/assets/sounds/game-over.wav`** (Efek suara untuk game over)
+   * **`/assets/images/SnakeHead.png`** (Gambar kepala ular)
+   * **`/assets/images/Donut.png`** (Gambar makanan)
+   * **`/assets/images/menu.png`** (Gambar untuk layar menu)
 
-3. **Instal dependensi yang diperlukan**:
-
-   ```bash
-   pip install pygame opencv-python cvzone numpy
-   ```
-
-4. **Jalankan program**:
+4. Jalankan permainan:
 
    ```bash
    python src/main.py
    ```
 
-## Penggunaan
+## Cara Kerja
 
-1. **Menu Utama**:
+* **Kontrol Gerakan Tangan**: Permainan ini menggunakan kamera untuk mendeteksi tangan pengguna. Posisi jari telunjuk dilacak, dan ular mengikuti gerakan tersebut. Deteksi jari telunjuk dilakukan dengan menggunakan **cvzone.HandTrackingModule**.
 
-   * Tekan **'S'** untuk memulai permainan.
-   * Tekan **'Q'** untuk keluar dari permainan.
+* **Mekanisme Permainan**:
 
-2. **Kontrol**:
+  * Ular bergerak sesuai dengan posisi jari telunjuk.
+  * Ketika ular memakan makanan, panjangnya bertambah dan skor meningkat.
+  * Jika ular bertabrakan dengan tubuhnya sendiri, permainan berakhir dan suara game over dimainkan.
+  * Pengguna dapat memulai ulang permainan dengan menekan **'R'** atau kembali ke menu utama dengan menekan **'M'**.
 
-   * Gunakan **jari telunjuk** untuk menggerakkan ular.
-   * Ular akan bergerak mengikuti posisi jari telunjuk yang terdeteksi oleh kamera.
+* **Layar Menu**: Permainan dimulai dengan menu di mana pengguna dapat memilih untuk **memulai** permainan dengan menekan **'S'** atau keluar dengan menekan **'Q'**.
 
-3. **Game Over**:
+## Demo
 
-   * Permainan akan berakhir ketika kepala ular bertabrakan dengan tubuhnya.
-   * Tekan **'R'** untuk memulai ulang permainan.
-   * Tekan **'M'** untuk kembali ke menu utama.
+\[soon]
 
-## Struktur Proyek
+## Kontributor
 
-```bash
-/SnakeGameCamera
-│
-├── /assets
-│   ├── /sounds
-│   │   ├── BGM.wav
-│   │   ├── eat.wav
-│   │   └── game-over.wav
-│   └── /images
-│       ├── Donut.png
-│       ├── SnakeHead.png
-│       └── menu.png
-│
-├── /src
-│   ├── main.py
-│   ├── game.py
-│   ├── menu.py
-│   ├── hand_detection.py
-│   └── utils.py
-│
-└── README.md
-```
-
-### Penjelasan Struktur Proyek:
-
-1. **`/assets/sounds/`**: Berisi file audio untuk BGM, efek suara makan makanan, dan suara game over.
-2. **`/assets/images/`**: Berisi gambar untuk makanan (Donut), kepala ular (SnakeHead), dan menu utama (menu.png).
-3. **`/src/`**: Berisi kode utama program, termasuk logika permainan, menu, deteksi tangan, dan utilitas tambahan.
-
-   * **`main.py`**: Berisi kode utama untuk menjalankan permainan.
-   * **`game.py`**: Menangani logika permainan Snake, seperti deteksi makanan, pergerakan ular, dan tabrakan.
-   * **`menu.py`**: Menangani tampilan menu utama dan interaksi tombol.
-   * **`hand_detection.py`**: Menangani deteksi tangan menggunakan **cvzone** dan **OpenCV**.
-   * **`utils.py`**: Berisi fungsi utilitas untuk menggambar tombol dan teks pada layar.
-
-## Kontribusi
-
-Jika Anda ingin berkontribusi pada proyek ini, silakan lakukan **fork** repositori ini dan buat **pull request** setelah melakukan perubahan. Pastikan untuk mengikuti konvensi dan format kode yang ada.
+* **Nama**: Zulvikar Kharisma Nur Muhammad (4.33.23.2.26)
+* **Mata Kuliah**: Pengolahan Citra
+* **Dosen Pengampu**: Ir. Prayitno, S.ST., M.T., Ph.D
 
 ## Lisensi
 
-Proyek ini dilisensikan di bawah **MIT License** - lihat file [LICENSE](LICENSE) untuk detail lebih lanjut.
-
----
+Proyek ini dilisensikan di bawah Lisensi MIT - lihat file [LICENSE](LICENSE) untuk detail lebih lanjut.
 
