@@ -1,30 +1,35 @@
-````markdown
+---
+
 # Snake Game with Hand Detection
 
 ## Deskripsi
+
 Snake Game dengan **deteksi tangan** menggunakan **OpenCV** dan **pygame**. Dalam game ini, pemain mengontrol ular dengan gerakan tangan (menggunakan deteksi jari telunjuk) dan bertujuan untuk makan makanan yang muncul di layar, meningkatkan skor. Game akan berakhir ketika kepala ular bertabrakan dengan tubuhnya.
 
 ## Fitur
-- Deteksi gerakan tangan menggunakan **OpenCV** dan **cvzone**.
-- Pemain menggerakkan ular menggunakan jari telunjuk yang terdeteksi oleh kamera.
-- Suara latar belakang (BGM), efek suara makan makanan, dan suara **game over**.
-- Tampilan menu utama dengan tombol **Start** dan **Exit**.
-- Fitur game over dan restart permainan.
-- Tampilan skor yang selalu terlihat selama permainan.
+
+* Deteksi gerakan tangan menggunakan **OpenCV** dan **cvzone**.
+* Pemain menggerakkan ular menggunakan jari telunjuk yang terdeteksi oleh kamera.
+* Suara latar belakang (BGM), efek suara makan makanan, dan suara **game over**.
+* Tampilan menu utama dengan tombol **Start** dan **Exit**.
+* Fitur game over dan restart permainan.
+* Tampilan skor yang selalu terlihat selama permainan.
 
 ## Teknologi yang Digunakan
-- **Python 3.x**
-- **pygame**: Untuk pemutaran audio dan pengaturan game.
-- **OpenCV**: Untuk pemrosesan citra dan deteksi tangan.
-- **cvzone**: Untuk menambahkan teks dan overlay pada gambar.
-- **NumPy**: Untuk pengolahan array dan deteksi tabrakan.
+
+* **Python 3.x**
+* **pygame**: Untuk pemutaran audio dan pengaturan game.
+* **OpenCV**: Untuk pemrosesan citra dan deteksi tangan.
+* **cvzone**: Untuk menambahkan teks dan overlay pada gambar.
+* **NumPy**: Untuk pengolahan array dan deteksi tabrakan.
 
 ## Persyaratan
+
 Pastikan Anda telah menginstal semua dependensi berikut:
 
 ```bash
 pip install pygame opencv-python cvzone numpy
-````
+```
 
 ## Instalasi
 
@@ -114,4 +119,6 @@ Jika Anda ingin berkontribusi pada proyek ini, silakan lakukan **fork** reposito
 ## Lisensi
 
 Proyek ini dilisensikan di bawah **MIT License** - lihat file [LICENSE](LICENSE) untuk detail lebih lanjut.
+
+---
 
