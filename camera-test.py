@@ -1,7 +1,7 @@
 import cv2
 
 # Try to open the default camera (index 0)
-cap = cv2.VideoCapture(2)
+cap = cv2.VideoCapture(3)
 
 if not cap.isOpened():  # Check if the camera is successfully opened
     print("Error: Camera not found or not accessible.")

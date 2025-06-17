@@ -8,10 +8,8 @@ def draw_button(img, text, position, width, height):
     button_rect = (position[0] - width // 2, position[1] - height // 2,
                    position[0] + width // 2, position[1] + height // 2)
 
-    # Draw the text and the rectangle for the button
+    # Draw the text without the rectangle (border)
     cvzone.putTextRect(img, text, position, scale=2, thickness=2, offset=20)
-    cv2.rectangle(img, (button_rect[0], button_rect[1]),
-                  (button_rect[2], button_rect[3]), (0, 255, 0), 2)
 
     # Return the button's rectangular area for collision detection
     return button_rect
