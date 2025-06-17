@@ -12,7 +12,7 @@ Proyek ini adalah **Snake Game** di mana pergerakan ular dikendalikan dengan ger
 
 ## Persyaratan
 
-- Python 3.x
+- Python 3.10
 - Pygame
 - OpenCV
 - cvzone
