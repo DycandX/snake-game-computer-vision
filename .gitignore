@@ -1,0 +1,67 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.db
+*.sqlite3
+*.log
+*.bak
+*.swp
+*.swo
+
+# Virtual environment
+.venv/
+venv/
+env/
+ENV/
+.venv/
+
+# Pygame
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tiff
+
+# OpenCV temporary files
+*.pgm
+*.ppm
+*.pbm
+
+# IDEs and editors
+.idea/
+.vscode/
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Files from pyinstaller
+dist/
+build/
+*.spec
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Files from coverage.py
+.coverage
+.coverage.*
+
+# Python egg files
+*.egg
+*.egg-info
+.eggs/
+
+# JetBrains IDEs (e.g. PyCharm, IntelliJ)
+*.iml
+.idea/
+
+# Logs
+*.log
+
+# Other files
+*.bak
+*.swp
